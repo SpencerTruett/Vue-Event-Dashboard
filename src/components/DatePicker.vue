@@ -2,9 +2,13 @@
   <v-col>
     <v-row rows="12" sm="6">
       <h2>
-        {{ dates[0] }}
-        <span v-if="dates.length>1">-</span>
-        {{ dates[1] }}
+        {{ new Date(dates[0]).toUTCString().split(" ").slice(0, 4).join(" ") }}
+        <span
+          v-if="dates.length>1"
+        >
+          -
+          {{ new Date(dates[1]).toUTCString().split(" ").slice(0, 4).join(" ") }}
+        </span>
       </h2>
     </v-row>
 
@@ -16,7 +20,6 @@
 
 <script>
 let d = new Date().toISOString().split('T')[0];
-console.log(Date())
 
   export default {
     data: () => ({
