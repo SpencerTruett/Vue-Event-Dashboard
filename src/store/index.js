@@ -61,4 +61,13 @@ export default new Vuex.Store({
     }
   },
   modules: {},
+  getters: {
+    topSporting(state) {
+      if (!state.sporting.events) {
+        return [];
+      }
+
+      return state.sporting.events.slice(0, 3);
+    }
+  }
 });
