@@ -2,13 +2,16 @@
   <v-app>
     <v-container>
       <h1>Event Dashboard</h1>
-      <v-col :sm="12" :md="6">
+      <v-col :sm="6" :md="6">
         <v-row>
           <v-col>
             <SportsCountCard />
           </v-col>
           <v-col>
             <TheaterCountCard />
+          </v-col>
+          <v-col>
+            <ConcertCountCard />
           </v-col>
         </v-row>
         <div>
@@ -23,9 +26,10 @@
 import DatePicker from "../components/DatePicker"
 import SportsCountCard from "../components/SportsCountCard"
 import TheaterCountCard from "../components/TheaterCountCard"
+import ConcertCountCard from "../components/ConcertCountCard"
 
 export default {
-  components: { DatePicker, SportsCountCard, TheaterCountCard }
+  components: { DatePicker, SportsCountCard, TheaterCountCard, ConcertCountCard }
 
 };
 </script>
