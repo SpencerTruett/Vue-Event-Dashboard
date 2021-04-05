@@ -28,6 +28,9 @@
           </td>
         </tr>
       </tbody>
+      <router-link v-if="topTheaters.length" to="/allTheaters">
+        <v-btn text>View All</v-btn>
+      </router-link>
     </v-simple-table>
     <p v-if="!topTheaters.length">
       <em>No available events in the selected dates</em>
