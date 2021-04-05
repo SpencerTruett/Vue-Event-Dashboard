@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <h3>Popular Concert Event</h3>
+    <h3>Popular Theater Event</h3>
     <v-simple-table>
       <thead>
         <tr>
@@ -11,7 +11,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="event in topConcerts" :key="event.id">
+        <tr v-for="event in topTheaters" :key="event.id">
           <td>{{ event.short_title }}</td>
           <td>{{ event.venue.name }}</td>
           <td>{{ new Date(event.datetime_local).toUTCString().split(" ").slice(0, 3).join(" ") }}</td>
@@ -32,7 +32,7 @@ import { mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["topConcerts"])
+    ...mapGetters(["topTheaters"])
   }
 }
 </script>
