@@ -3,10 +3,10 @@
     <v-card>
       <v-card-subtitle>
         <div>
-          <v-icon>mdi-football</v-icon>
+          <v-icon>mdi-movie</v-icon>
         </div>
         <div>{{ count }}</div>
-        <div class="mt-2">Sporting Events</div>
+        <div class="mt-2">Theater Events</div>
       </v-card-subtitle>
     </v-card>
   </v-app>
@@ -17,12 +17,12 @@ import { mapState } from "vuex";
 
 export default {
   computed: {
-    ...mapState(["sporting"]),
+    ...mapState(["theater"]),
     count() {
-      if (!this.sporting.meta || !this.sporting.meta.total) {
+      if (!this.theater.meta || !this.theater.meta.total) {
         return 0;
       }
-      return this.sporting.meta.total;
+      return this.theater.meta.total;
     }
   }
 };

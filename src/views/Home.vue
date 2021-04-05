@@ -7,6 +7,9 @@
           <v-col>
             <SportsCountCard />
           </v-col>
+          <v-col>
+            <TheaterCountCard />
+          </v-col>
         </v-row>
         <div>
           <DatePicker />
@@ -19,9 +22,10 @@
 <script>
 import DatePicker from "../components/DatePicker"
 import SportsCountCard from "../components/SportsCountCard"
+import TheaterCountCard from "../components/TheaterCountCard"
 
 export default {
-  components: { DatePicker, SportsCountCard }
+  components: { DatePicker, SportsCountCard, TheaterCountCard }
 
 };
 </script>

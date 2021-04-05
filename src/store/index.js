@@ -23,12 +23,16 @@ export default new Vuex.Store({
     },
     setSportingEvents(state, payload) {
       state.sporting = payload;
+    },
+    setTheaterEvents(state, payload) {
+      state.theater = payload;
     }
   },
   actions: {
     async getEventsForDateRange({ commit, dispatch }, range) {
       commit("setDateSelected", range);
       dispatch("getSportingEvents", range);
+      dispatch("getTheaterEvents", range);
     },
 
     async getSportingEvents({ commit }, range) {
@@ -36,6 +40,13 @@ export default new Vuex.Store({
       const res = await fetch(url);
       const data = await res.json();
       commit("setSportingEvents", data);
+    },
+
+    async getTheaterEvents({ commit }, range) {
+      const url = getSeatgeekUrl("theater", range);
+      const res = await fetch(url);
+      const data = await res.json();
+      commit("setTheaterEvents", data);
     }
   },
   modules: {},
