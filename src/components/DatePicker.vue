@@ -13,12 +13,15 @@
     </v-row>
 
     <v-row rows="12" sm="6">
-      <v-date-picker v-model="dates" range></v-date-picker>
+      <v-date-picker v-model="dates" range @change="selectDate"></v-date-picker>
     </v-row>
   </v-col>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
+
 let d = new Date().toISOString().split('T')[0];
 
   export default {
@@ -30,7 +33,18 @@ let d = new Date().toISOString().split('T')[0];
         return this.dates.join(' ~ ')
       },
     },
+    methods: {
+      ...mapActions(["getEventsForDateRange"]),
+
+      selectDate() {
+        const range = {
+          startDate: this.dates[0],
+          endDate: this.dates[1]
+        };
+        this.getEventsForDateRange(range);
+    }
   }
+}
 </script>
 
 <style>
