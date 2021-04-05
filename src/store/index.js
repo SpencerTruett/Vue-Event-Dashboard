@@ -82,7 +82,7 @@ export default new Vuex.Store({
       if (!state.concert.events) {
         return [];
       }
-
+      console.log(state.concert.events)
       return state.concert.events.slice(0, 3);
     }
   }

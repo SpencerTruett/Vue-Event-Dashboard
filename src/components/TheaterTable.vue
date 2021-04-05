@@ -17,13 +17,21 @@
           <td>{{ new Date(event.datetime_local).toUTCString().split(" ").slice(0, 3).join(" ") }}</td>
           <td>
             <a :href="event.url" target="_blank">
-              ${{event.stats.lowest_price}} -
-              ${{event.stats.highest_price}}
+              <div v-if="event.stats.lowest_price != null">
+                ${{event.stats.lowest_price}} -
+                ${{event.stats.highest_price}}
+              </div>
+              <p v-if="event.stats.lowest_price == null">
+                <em>No Tickets</em>
+              </p>
             </a>
           </td>
         </tr>
       </tbody>
     </v-simple-table>
+    <p v-if="!topTheaters.length">
+      <em>No available events in the selected dates</em>
+    </p>
   </v-card>
 </template>
 
