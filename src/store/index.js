@@ -69,12 +69,21 @@ export default new Vuex.Store({
 
       return state.sporting.events.slice(0, 3);
     },
+
     topTheaters(state) {
       if (!state.theater.events) {
         return [];
       }
 
       return state.theater.events.slice(0, 3);
+    },
+
+    topConcerts(state) {
+      if (!state.concert.events) {
+        return [];
+      }
+
+      return state.concert.events.slice(0, 3);
     }
   }
 });

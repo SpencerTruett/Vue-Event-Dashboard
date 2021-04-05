@@ -26,6 +26,9 @@
           <v-row>
             <TheaterTable />
           </v-row>
+          <v-row>
+            <ConcertTable />
+          </v-row>
         </v-col>
       </v-row>
     </v-container>
@@ -39,9 +42,10 @@ import TheaterCountCard from "../components/TheaterCountCard"
 import ConcertCountCard from "../components/ConcertCountCard"
 import SportsTable from "../components/SportsTable"
 import TheaterTable from "../components/TheaterTable"
+import ConcertTable from "../components/ConcertTable"
 
 export default {
-  components: { DatePicker, SportsCountCard, TheaterCountCard, ConcertCountCard, SportsTable, TheaterTable }
+  components: { DatePicker, SportsCountCard, TheaterCountCard, ConcertCountCard, SportsTable, TheaterTable, ConcertTable }
 
 };
 </script>
