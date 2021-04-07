@@ -1,6 +1,6 @@
 <template>
-  <v-card>
-    <h3>Popular Concert Event</h3>
+  <v-card elevation="2">
+    <h2 class="pa-3 purple--text text--lighten-1">Popular Concert Events</h2>
     <v-simple-table>
       <thead>
         <tr>
@@ -32,7 +32,7 @@
         <v-btn text>View All</v-btn>
       </router-link>
     </v-simple-table>
-    <p v-if="!topConcerts.length">
+    <p v-if="!topConcerts.length" class="text-center pa-12 text--secondary">
       <em>No available events in the selected dates</em>
     </p>
   </v-card>

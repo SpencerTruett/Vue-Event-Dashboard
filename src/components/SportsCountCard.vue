@@ -1,12 +1,12 @@
 <template>
   <v-app>
-    <v-card>
-      <v-card-subtitle>
+    <v-card class="pa-4" color="red lighten-2">
+      <v-card-subtitle class="text-center">
         <div>
-          <v-icon>mdi-football</v-icon>
+          <v-icon x-large color="white text-center">mdi-football</v-icon>
         </div>
-        <div>{{ count }}</div>
-        <div class="mt-2">Sporting Events</div>
+        <h1 class="text-center">{{ count }}</h1>
+        <h5 class="text--secondary text-center">Sporting Events</h5>
       </v-card-subtitle>
     </v-card>
   </v-app>

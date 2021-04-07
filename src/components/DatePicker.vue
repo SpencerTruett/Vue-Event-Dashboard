@@ -13,7 +13,16 @@
     </v-row>
 
     <v-row rows="12" sm="6">
-      <v-date-picker v-model="dates" range @change="selectDate"></v-date-picker>
+      <v-date-picker
+        v-model="dates"
+        range
+        @change="selectDate"
+        elevation="2"
+        full-width
+        color="blue darken-2"
+        prev-icon="mdi-skip-previous"
+        next-icon="mdi-skip-next"
+      ></v-date-picker>
     </v-row>
   </v-col>
 </template>

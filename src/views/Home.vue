@@ -1,37 +1,32 @@
 <template>
-  <v-app>
-    <v-container>
-      <h1>Event Dashboard</h1>
-      <v-row>
-        <v-col :sm="6" :md="6">
-          <v-row>
-            <v-col>
-              <SportsCountCard />
-            </v-col>
-            <v-col>
-              <TheaterCountCard />
-            </v-col>
-            <v-col>
-              <ConcertCountCard />
-            </v-col>
-          </v-row>
-          <div>
-            <DatePicker />
-          </div>
-        </v-col>
-        <v-col :sm="6" :md="6">
-          <v-row>
-            <SportsTable />
-          </v-row>
-          <v-row>
-            <TheaterTable />
-          </v-row>
-          <v-row>
-            <ConcertTable />
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-container>
+  <v-app id="app">
+    <v-main>
+      <v-container>
+        <v-row>
+          <v-col sm="12" lg="6" xl="5">
+            <v-row class="mb-6">
+              <v-col>
+                <SportsCountCard />
+              </v-col>
+              <v-col>
+                <TheaterCountCard />
+              </v-col>
+              <v-col>
+                <ConcertCountCard />
+              </v-col>
+            </v-row>
+            <v-row>
+              <DatePicker class="mb-5" />
+            </v-row>
+          </v-col>
+          <v-col sm="12" lg="6" xl="7">
+            <SportsTable class="mb-6" />
+            <TheaterTable class="mb-6" />
+            <ConcertTable class="mb-6" />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
   </v-app>
 </template>
 
