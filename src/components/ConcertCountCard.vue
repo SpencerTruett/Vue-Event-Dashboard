@@ -1,15 +1,13 @@
 <template>
-  <v-app>
-    <v-card class="pa-4" color="purple lighten-2">
-      <v-card-subtitle class="text-center">
-        <div>
-          <v-icon x-large color="white text-center">mdi-music</v-icon>
-        </div>
-        <h1 class="text-center">{{ count }}</h1>
-        <h5 class="text--secondary text-center">Concert Events</h5>
-      </v-card-subtitle>
-    </v-card>
-  </v-app>
+  <v-card color="purple lighten-2">
+    <v-card-subtitle class="text-center">
+      <div>
+        <v-icon x-large color="white text-center">mdi-music</v-icon>
+      </div>
+      <h1 class="text-center">{{ count }}</h1>
+      <h5 class="text--secondary text-center">Concert Events</h5>
+    </v-card-subtitle>
+  </v-card>
 </template>
 
 <script>
